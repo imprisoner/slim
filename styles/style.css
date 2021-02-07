@@ -1,0 +1,415 @@
+@import 'fonts.css';
+@import 'button.css';
+/* @import '../node_modules/swiper/swiper-bundle.css'; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 3000px;
+    background-color: #e7e7e7;
+}
+
+.container {
+    display: block;
+    width: 1175px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    display: block;
+    width: 50%;
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+}
+
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 100% - 16px;
+    max-width: 1175px;
+    justify-content: space-between;
+    padding: 30px 0;
+    /* margin: 0 auto; */
+    /* border: 2px solid #fff; */
+    background-color: transparent;
+    /* position: absolute; */
+}
+
+.nav-logo img {
+    width: 438px;
+    height: 70px;
+    /* background-color: #000; */
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-link-block {
+    margin-right: 40px;
+}
+
+.nav-link-block:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Agora Sans Pro';
+}
+
+.nav-link-underline {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+
+
+.title-section {
+    display: flex;
+    height: 800px;
+    background-color: rgb(247, 144, 144);
+    background: url('../assets/bg.jpg') no-repeat center/cover;
+}
+
+.title-section h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Agora Sans Pro';
+    font-size: 40px;
+    font-weight: 500;
+    width: 55%;
+    line-height: 64px;
+    margin-top: 280px;
+
+}
+
+/* cards */
+.cards-section {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+
+.cards-section .wrap {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1175px;
+    margin: 0 auto;
+    left: calc((100% - 1175px)/2);
+    top: -200px;
+}
+
+.card {
+    width: 370px;
+    height: 530px;
+    background-color: #405477;
+    padding: 70px 25px 50px 33px;
+    text-align: center;
+}
+
+.card-icon {
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    margin-bottom: 45px;
+    font-family: 'Agora Sans Pro';
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-text {
+    margin-bottom: 55px;
+    font-family: 'Agora Sans Pro';
+    font-size: 16px;
+    font-weight: 500;
+    color: #e7e7e7;
+    /* word-spacing: 3px; */
+    line-height: 28px;
+}
+
+/* section about */
+
+.about-section {
+    padding-top: 490px;
+    padding-bottom: 35px;
+    background: #fff;
+}
+
+.about-content {
+    width: 45%;
+}
+
+.about-title {
+    font-family: 'Agora Sans Pro';
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 53px;
+}
+
+.about-text {
+    font-family: 'Agora Sans Pro';
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+    line-height: 28px;
+    margin-bottom: 52px;
+}
+
+.about-image {
+    width: 570px;
+    height: 435px;
+    background-color: grey;
+    margin-left: auto;
+}
+
+.about-content .button {
+    margin: 0;
+}
+
+/* section  projects*/
+.projects-section {
+    background: #fff;
+    padding-top: 30px;
+}
+
+.projects-title {
+    font-family: 'Agora Sans Pro';
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+
+.swiper-container {
+    height: 480px;
+}
+
+.projects-slide_1 {
+    background: url('../assets/slides/046_big2.jpg')no-repeat center -20px / cover;
+}
+
+.projects-slide_2 {
+    background: url('../assets/slides/ppr-elektromontagnye-raboty.jpg')no-repeat center / cover;
+}
+
+.projects-slide_3 {
+    background: url('../assets/slides/129.jpg')no-repeat center / cover;
+}
+
+.projects-slide_4 {
+    background: url('../assets/slides/13.png')no-repeat center / cover;
+}
+
+.projects-slide_5 {
+    background: url('../assets/slides/840px-Communication-tower.jpg')no-repeat center / cover;
+}
+
+.projects-slide_6 {
+    background: url('../assets/slides/montazh-vyshek.jpg')no-repeat center / cover;
+}
+
+.projects-slide_7 {
+    background: url('../assets/slides/unnamed.jpg') no-repeat center / cover;
+}
+
+/* section advantages */
+
+.advantages-section {
+    padding: 115px 0;
+    background-color: #fff;
+}
+
+.advantages-title {
+    font-family: 'Agora Sans Pro';
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.advantages-wrap {
+    justify-content: space-between;
+}
+
+.advantages-col {
+    max-width: 45%;
+}
+
+.advantage-content {
+    margin-bottom: 65px;
+}
+
+.advantage-subtitle {
+    font-family: 'Agora Sans Pro';
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.advantage-text {
+    font-family: 'Agora Sans Pro';
+    font-size: 18px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 28px;
+}
+
+/* news-section */
+
+.news-section {
+    padding: 105px 0 125px 0;
+    background: #19a1b1;
+}
+
+.news-title {
+    font-family: 'Agora Sans Pro';
+    font-size: 38px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.news-wrap {
+    justify-content: space-between;
+}
+
+.news-content {
+    max-width: 30%;
+}
+
+.news-date {
+    margin-right: 35px;
+}
+
+.date-dd,
+.date-mm {
+    display: block;
+    color: #c8cccd;
+}
+
+.date-dd {
+    font-family: 'Agora Sans Pro';
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.date-mm {
+    font-family: 'Agora Sans Pro';
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.news-subtitle {
+    color: #fff;
+    font-family: 'Agora Sans Pro';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    word-spacing: 5px;
+}
+
+.news-top {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+/* .news-body {
+
+} */
+
+.news-text {
+    font-family: 'Agora Sans Pro';
+    font-size: 18px;
+    font-weight: 500;
+    color: #e6e6e6;
+    line-height: 28px;
+    margin-bottom: 65px;
+    text-align: justify;
+}
+
+.news-body .button {
+    margin: 0;
+}
+
+/* map-section */
+
+/* footer */
+.footer {
+    background-color: #405477;
+    height: 515px;
+    padding-top: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.icons-wrap {
+    justify-content: space-around;
+}
+.icon-block {
+    max-width: 25%;
+}
+.footer-icon {
+    font-size: 24px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+}
+
+.footer-text {
+    color: #fff;
+    font-family: 'Agora Sans Pro';
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer-scroll-top {
+    position: absolute;
+    bottom: calc(-140px * 2/3);
+    left: calc((100% - 140px) / 2);
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.scroll-top-btn {
+    display: block;
+    color: #405477;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    left: calc((100% - 25px) / 2);
+    top: 10px;
+}

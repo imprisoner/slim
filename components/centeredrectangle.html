@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+   
+    .block {
+        display: block;
+        width: 500px;
+        height: 300px;
+        border: 1px solid red;
+        /* position: absolute;
+        top: calc((100% - 300px)/2);
+        left: calc((100% - 500px)/2); */
+        background-color: rgb(231, 104, 104);
+    }
+
+    .child {
+        width: 200px;
+        height: 120px;
+        position: absolute;
+        display: block;
+    }
+
+    .hello {
+        background-color: #fff;
+        position: absolute;
+        display: block;
+    }
+
+    h1 {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <header class="block">
+        <!-- <div class="child"></div> -->
+        <div class="hello">   <h1>Hello World!</h1></div>
+         
+    </header>
+</body>
+
+</html>

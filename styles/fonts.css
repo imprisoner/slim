@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Agora Sans Pro';
+    src: url('../assets/fonts/PFAgoraSansPro-Regular.woff'),
+        url('../assets/fonts/PFAgoraSansPro-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Agora Sans Pro';
+    src: url('../assets/fonts/PFAgoraSansPro-Medium.woff'),
+        url('../assets/fonts/PFAgoraSansPro-Medium.woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Agora Sans Pro';
+    src: url('../assets/fonts/PFAgoraSansPro-Bold.woff'),
+        url('../assets/fonts/PFAgoraSansPro-Bold.woff2');
+    font-weight: bold;
+}
