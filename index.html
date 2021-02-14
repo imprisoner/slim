@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
@@ -16,30 +17,57 @@
         <div class="container">
             <div class="header-nav">
                 <div class="nav-logo">
-                    <img src="./assets/logo/logo5.png" alt="logo">
                 </div>
-                <nav class="nav-menu">
-                    <div class="nav-link-block">
-                        <a href="#" class="nav-link">О нас</a>
-                        <div class="nav-link-underline"></div>
+
+                <div class="mobile-icons">
+                    <div class="callback-icon">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
                     </div>
-                    <div class="nav-link-block">
-                        <a href="#" class="nav-link">Наши проекты</a>
-                        <!-- <div class="nav-link-underline"></div> -->
+                    <div class="nav-menu-icon">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
                     </div>
-                    <div class="nav-link-block">
-                        <a href="#" class="nav-link">Преимущества</a>
-                        <!-- <div class="nav-link-underline"></div> -->
-                    </div>
-                    <div class="nav-link-block">
-                        <a href="#" class="nav-link">Новости</a>
-                        <!-- <div class="nav-link-underline"></div> -->
-                    </div>
-                    <div class="nav-link-block">
-                        <a href="#" class="nav-link">Контакты</a>
-                        <!-- <div class="nav-link-underline"></div> -->
-                    </div>
+                </div>
+
+                <nav class="desktop-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-link-block">
+                            <a href="#about" class="nav-link">О нас</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#projects" class="nav-link">Наши проекты</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#advantages" class="nav-link">Преимущества</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#news" class="nav-link">Новости</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#contacts" class="nav-link">Контакты</a>
+                        </li>
+                        <div class="nav-link-underline" style="display: none;"></div>
+                    </ul>
                 </nav>
+                <nav class="mobile-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-link-block">
+                            <a href="#about" class="nav-link">О нас</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#projects" class="nav-link">Наши проекты</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#advantages" class="nav-link">Преимущества</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#news" class="nav-link">Новости</a>
+                        </li>
+                        <li class="nav-link-block">
+                            <a href="#contacts" class="nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </header>
@@ -49,14 +77,9 @@
                 Мы предоставляем полный комплекс строительных <br>и электромонтажных услуг
             </h1>
         </div>
-    </section>
-    <section class="cards-section">
         <div class="wrap">
             <div class="card">
-
                 <img class="card-icon" src="./assets/icons/compass.png" alt="develop">
-
-
                 <h4 class="card-title">Проектирование и строительство</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus optio
                     voluptatem quod beatae
@@ -67,9 +90,7 @@
                 </a>
             </div>
             <div class="card">
-
                 <img class="card-icon" src="./assets/icons/electricity-tower.png" alt="build">
-
                 <h4 class="card-title">Монтаж систем электроснабжения</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus optio
                     voluptatem quod beatae
@@ -83,7 +104,6 @@
                 <img class="card-icon"
                     src="./assets/icons/high-voltage-electricity-electric-shock-9d33f2969b78325755c0a897d1cbe93f.png"
                     alt="repair">
-
                 <h4 class="card-title">Восстановительные работы и генерация</h4>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus optio
                     voluptatem quod beatae
@@ -94,9 +114,65 @@
                 </a>
             </div>
         </div>
-    </section>
+        <div class="swiper-container cards-slider">
+           
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cards-slide">
+                    <div class="card">
+                        <img class="card-icon" src="./assets/icons/compass.png" alt="develop">
+                        <h4 class="card-title">Проектирование и строительство</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus
+                            optio
+                            voluptatem quod beatae
+                            maxime fugit!
+                        </p>
+                        <a type="button" href="#" class="button">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide cards-slide">
+                    <div class="card">
+                        <img class="card-icon" src="./assets/icons/electricity-tower.png" alt="build">
+                        <h4 class="card-title">Монтаж систем электроснабжения</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus
+                            optio
+                            voluptatem quod beatae
+                            maxime fugit!
+                        </p>
+                        <a type="button" href="#" class="button">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide cards-slide">
+                    <div class="card">
+                        <img class="card-icon"
+                            src="./assets/icons/high-voltage-electricity-electric-shock-9d33f2969b78325755c0a897d1cbe93f.png"
+                            alt="repair">
+                        <h4 class="card-title">Восстановительные работы и генерация</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus
+                            optio
+                            voluptatem quod beatae
+                            maxime fugit!
+                        </p>
+                        <a type="button" href="#" class="button">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-    <section class="about-section">
+
+        </div>
+    </section>
+    <!-- <section class="cards-section"> -->
+        
+    <!-- </section> -->
+
+    <section class="about-section" id="about">
         <div class="container flex">
             <div class="about-content">
                 <h2 class="about-title">О Компании</h2>
@@ -116,32 +192,16 @@
         </div>
     </section>
 
-    <section class="projects-section">
+   <section class="projects-section" id="projects">
         <div class="container">
             <h2 class="projects-title">Наши проекты</h2>
-            <!--  <div class="projects-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="projects-slide">
-                                        Slide 1
-                                    </div>
-                                    <div class="projects-slide">
-                                        Slide 2
-                                    </div>
-                                    <div class="projects-slide">
-                                        Slide 3
-                                    </div>
-                                </div>
-                        </div> -->
+            
         </div>
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <!-- If we need navigation buttons -->
+        <div class="swiper-container projects-slider">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
             <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide projects-slide_1">
                 </div>
                 <div class="swiper-slide projects-slide_2">
@@ -161,7 +221,7 @@
 
     </section>
 
-    <section class="advantages-section">
+    <section class="advantages-section" id="advantages">
         <div class="container">
             <h2 class="advantages-title">Преимущества работы с нами</h2>
             <div class="advantages-wrap flex">
@@ -214,7 +274,7 @@
         </div>
     </section>
 
-    <section class="news-section">
+    <!-- <section class="news-section" id="news">
         <div class="container">
             <h2 class="news-title">Новости</h2>
             <div class="news-wrap flex">
@@ -264,15 +324,15 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
 
-    <section class="map-section">
+     <section class="map-section">
         <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A2ff8482f1b7e87bee7ca9d742c0dcec0e2e989307646688cee66ca9475b5e97c&amp;source=constructor"
-            width="100%" height="720" frameborder="0" style="pointer-events: none;"></iframe>
+            width="100%" height="auto" frameborder="0" style="pointer-events: none;"></iframe>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="icons-wrap flex">
                 <div class="icon-block">
@@ -287,7 +347,7 @@
                 </div>
                 <div class="icon-block">
                     <div class="footer-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <p class="footer-text">Телефон: +7 (999) 666-14-88</p>
+                    <p class="footer-text">Телефон: <br class="text-wrapper"/> +7 (999) 666-14-88</p>
                 </div>
                 <div class="icon-block">
                     <div class="footer-icon"><i class="fas fa-fax"></i></div>
@@ -303,6 +363,7 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="./node_modules/swiper/swiper-bundle.js"></script> -->
     <script src="./js/main.js"></script>
 
 </body>

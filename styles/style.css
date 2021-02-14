@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'button.css';
+
 /* @import '../node_modules/swiper/swiper-bundle.css'; */
 
 * {
@@ -10,11 +11,10 @@
 
 body {
     height: 3000px;
-    background-color: #e7e7e7;
+    /* background-color: #222222; */
 }
 
 .container {
-    display: block;
     width: 1175px;
     margin: 0 auto;
 }
@@ -27,9 +27,14 @@ header {
     display: block;
     width: 50%;
     width: 100%;
-    border: 1px solid black;
     position: absolute;
-    
+}
+
+h2 {
+    font-family: 'Agora Sans Pro';
+    font-size: 38px;
+    font-weight: 500;
+    color: #222222;
 }
 
 .fixed {
@@ -39,7 +44,7 @@ header {
     box-shadow: -5px 5px 15px;
     z-index: 5;
     transform: translateY(-100px);
-    
+
 }
 
 .header-nav {
@@ -50,27 +55,36 @@ header {
     max-width: 1175px;
     justify-content: space-between;
     padding: 30px 0;
-    /* margin: 0 auto; */
-    /* border: 2px solid #fff; */
     background-color: transparent;
-    /* position: absolute; */
 }
 
-.nav-logo img {
-    width: 438px;
+.nav-logo {
+    width: 398px;
     height: 70px;
-    /* background-color: #000; */
+    background: url('../assets/logo/logo5.png') center / cover no-repeat;
 }
 
 .nav-menu {
     display: flex;
+    position: relative;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
 }
 
 .nav-link-block {
     margin-right: 40px;
+    list-style: none;
+    text-align: center;
 }
 
-.nav-link-block:last-child {
+.nav-link-block:nth-child(5) {
+
     margin-right: 0;
 }
 
@@ -84,13 +98,38 @@ header {
 }
 
 .nav-link-underline {
+    list-style: none;
     height: 2px;
     width: 100%;
     background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transition: transform .25s;
 }
 
+.nav-link-block:first-child.active~.nav-link-underline {
+    transform: translateX(0) scaleX(0.078);
+}
 
+.nav-link-block:nth-child(2).active~.nav-link-underline {
+    transform: translateX(13.75%) scaleX(0.21);
+}
 
+.nav-link-block:nth-child(3).active~.nav-link-underline {
+    transform: translateX(calc(40.5%)) scaleX(0.215);
+}
+
+.nav-link-block:nth-child(4).active~.nav-link-underline {
+    transform: translateX(calc(67.5%)) scaleX(0.13);
+}
+
+.nav-link-block:nth-child(5).active~.nav-link-underline {
+    transform: translateX(86.05%) scaleX(0.145);
+}
+
+/* title section */
 
 .title-section {
     display: flex;
@@ -112,21 +151,24 @@ header {
 }
 
 /* cards */
-.cards-section {
+/* .cards-section {
     background-color: #fff;
     position: relative;
     width: 100%;
+} */
+
+.cards-slider {
+    display: none;
 }
 
-
-.cards-section .wrap {
+.title-section .wrap {
     display: flex;
     justify-content: space-between;
     position: absolute;
     width: 1175px;
     margin: 0 auto;
     left: calc((100% - 1175px)/2);
-    top: -200px;
+    top: 600px;
 }
 
 .card {
@@ -135,6 +177,12 @@ header {
     background-color: #405477;
     padding: 70px 25px 50px 33px;
     text-align: center;
+    border-radius: 10px;
+}
+
+.card:hover {
+    /* box-shadow: -1px 1px 20px 1px #222222; */
+    box-shadow: -2px 3px 7px 0px #979292;
 }
 
 .card-icon {
@@ -175,9 +223,6 @@ header {
 }
 
 .about-title {
-    font-family: 'Agora Sans Pro';
-    font-size: 38px;
-    font-weight: 500;
     margin-top: 20px;
     margin-bottom: 53px;
 }
@@ -196,6 +241,8 @@ header {
     height: 435px;
     background-color: grey;
     margin-left: auto;
+    border-radius: 10px;
+    background: url(../assets/mocks/about.jpg) center / cover no-repeat;
 }
 
 .about-content .button {
@@ -209,9 +256,6 @@ header {
 }
 
 .projects-title {
-    font-family: 'Agora Sans Pro';
-    font-size: 38px;
-    font-weight: 500;
     margin-bottom: 80px;
 }
 
@@ -220,7 +264,7 @@ header {
 }
 
 .projects-slide_1 {
-    background: url('../assets/slides/046_big2.jpg')no-repeat center -20px / cover;
+    background: url('../assets/slides/046_big2.jpg')no-repeat center / cover;
 }
 
 .projects-slide_2 {
@@ -255,9 +299,6 @@ header {
 }
 
 .advantages-title {
-    font-family: 'Agora Sans Pro';
-    font-size: 38px;
-    font-weight: 500;
     margin-top: 20px;
     margin-bottom: 55px;
 }
@@ -279,6 +320,7 @@ header {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 25px;
+    color: #333333;
 }
 
 .advantage-text {
@@ -297,9 +339,6 @@ header {
 }
 
 .news-title {
-    font-family: 'Agora Sans Pro';
-    font-size: 38px;
-    font-weight: 500;
     color: #fff;
     margin-bottom: 60px;
 }
@@ -369,6 +408,14 @@ header {
 
 /* map-section */
 
+.map-section {
+    max-height: 720px;
+}
+
+.map-section>iframe {
+    height: 720px;
+}
+
 /* footer */
 .footer {
     background-color: #405477;
@@ -381,9 +428,11 @@ header {
 .icons-wrap {
     justify-content: space-around;
 }
+
 .icon-block {
     max-width: 25%;
 }
+
 .footer-icon {
     font-size: 24px;
     color: #fff;
@@ -414,6 +463,7 @@ header {
     height: 140px;
     border-radius: 50%;
 }
+
 .scroll-top-btn {
     display: block;
     color: #405477;
@@ -422,4 +472,452 @@ header {
     position: absolute;
     left: calc((100% - 25px) / 2);
     top: 10px;
+}
+
+.text-wrapper {
+    display: none;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1199px) {
+
+    .container {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .mobile-icons {
+        display: flex;
+    }
+
+    .callback-icon {
+        color: white;
+        font-size: 30px;
+        margin-right: 50px;
+    }
+
+    .nav-menu-icon {
+        color: white;
+        font-size: 32px;
+    }
+
+    .header-nav {
+        position: relative;
+    }
+
+    .header-nav .desktop-nav {
+        display: none;
+    }
+
+    .header-nav .mobile-nav {
+        position: absolute;
+        bottom: -185px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.301);
+        padding: 15px;
+        border-radius: 2px;
+    }
+
+    .nav-menu {
+        display: block
+    }
+
+    .nav-link-block {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .nav-link-block:nth-child(5) {
+
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 18px;
+        opacity: 1;
+    }
+
+    .nav-link-underline {
+        display: none;
+    }
+
+    .title-section {
+        height: 600px;
+    }
+
+    .title-section h1 {
+        font-size: 34px;
+        line-height: 48px;
+        margin-top: 240px;
+    }
+
+    .title-section .wrap {
+        display: none;
+    }
+
+    .swiper-container.cards-slider {
+        display: flex;
+        width: 370px;
+        height: 530px;
+        position: absolute;
+        top: 450px;
+        left: calc((100% - 370px) / 2);
+    }
+
+    .card:hover {
+        box-shadow: none;
+    }
+
+
+    .about-image {
+        width: 450px;
+        height: 380px;
+    }
+
+    .about-title {
+        margin-top: 12px;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        margin-bottom: 30px;
+        max-height: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-rendering: auto;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+    }
+
+    .map-section>iframe {
+        height: 500px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .container {
+        width: 720px;
+    }
+
+    h2 {
+        font-size: 32px
+    }
+
+    .header-nav {
+        padding: 20px 0;
+    }
+
+    .title-section h1 {
+        font-size: 26px;
+        line-height: 42px;
+        margin-top: 220px;
+    }
+
+    .about-image {
+        width: 400px;
+        height: 330px;
+    }
+
+    .about-title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 230px;
+    }
+
+    .projects-title {
+        margin-bottom: 45px;
+    }
+
+    .advantages-section {
+        padding: 70px 0;
+    }
+
+    .footer {
+        height: 450px;
+    }
+
+    .text-wrapper {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .container {
+        width: 540px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .nav-logo {
+        background: url('../assets/logo/logo3.png') center / contain no-repeat;
+        width: 217px;
+    }
+
+    .title-section h1 {
+        width: 73%;
+    }
+
+    .nav-logo {
+        width: 160px;
+    }
+
+    .about-image {
+        width: 290px;
+        height: 300px;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 21px;
+        max-width: 213px;
+    }
+
+    .advantages-section {
+        padding: 55px 0;
+    }
+
+    .advantages-title {
+        margin-bottom: 45px;
+    }
+
+    .advantage-content {
+        margin-bottom: 30px;
+    }
+
+    .advantage-subtitle {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .advantage-text {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .footer {
+        height: 500px;
+        padding-top: 80px;
+    }
+
+    .icons-wrap {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .icon-block {
+        width: 50%;
+        margin-bottom: 50px;
+        max-width: none;
+    }
+
+    .icon-block:nth-child(2) {
+        order: 2;
+    }
+
+    .icon-block:nth-child(4) {
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 559px) {
+
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+
+
+    .nav-logo {
+        background: url('../assets/logo/logo3.png') center / contain no-repeat;
+        width: 120px;
+        height: 50px;
+    }
+
+    .callback-icon {
+        font-size: 22px;
+    }
+
+    .callback-icon i {
+        margin-top: 2px;
+    }
+
+    .nav-menu-icon {
+        font-size: 26px;
+    }
+
+    .title-section h1 {
+        font-size: 21px;
+        line-height: 40px;
+        margin-top: 250px;
+        width: 100%;
+        max-width: 335px;
+    }
+
+    .swiper-container.cards-slider {
+        display: flex;
+        width: 320px;
+        height: 450px;
+        position: absolute;
+        top: 450px;
+        left: calc((100% - 320px) / 2);
+    }
+
+    .card {
+        width: 320px;
+        height: 450px;
+        padding: 40px 20px 40px 25px;
+    }
+
+    .card-icon {
+        max-height: 80px;
+    }
+
+    .card-title {
+        margin-bottom: 30px;
+        font-size: 22px;
+    }
+
+    .card-text {
+        font-size: 15px;
+        margin-bottom: 45px;
+    }
+
+    .about-section {
+        padding-top: 380px;
+    }
+
+    .about-section .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        width: unset;
+        margin-bottom: 20px;
+    }
+
+    .about-title {
+        text-align: center;
+    }
+
+    .about-text {
+        margin: 10px auto 20px;
+        font-size: 15px;
+        line-height: 21px;
+        max-width: 90%;
+    }
+
+    .about-content .button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-image {
+        margin-right: auto;
+        width: 310px;
+        height: 270px;
+    }
+
+    .projects-slider {
+        height: 280px;
+    }
+
+    .advantages-wrap {
+        flex-direction: column;
+    }
+    .advantage-content {
+        margin-left: 10px;
+    }
+    .advantages-title {
+        width: 90%;
+    }
+
+    .advantages-col {
+        max-width: 100%;
+        margin: 0px auto;
+    }
+
+    .advantage-text {
+        width: 91%;
+    }
+
+    .map-section>iframe {
+        height: 300px;
+    }
+
+    .footer {
+        height: 450px;
+        padding-top: 50px;
+    }
+
+    .footer-icon {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 374px) {
+
+    h2 {
+        font-size: 24px;
+    }
+    .title-section {
+        height: 500px;
+    }
+
+    .title-section h1 {
+        font-size: 19px;
+        line-height: 32px;
+        margin-top: 150px;
+    }
+
+    .swiper-container.cards-slider {
+        width: 300px;
+        height: 440px;
+        top: 350px;
+        left: calc((100% - 300px) / 2);
+    }
+
+    .card {
+        width: 300px;
+        height: 440px;
+        padding: 30px 15px 20px 15px;
+    }
+    .card-text {
+        margin-bottom: 55px;
+    }
+
+    .about-section {
+        padding-top: 340px;
+    }
+    .about-text {
+        line-height: 20px;
+        max-width: 93%;
+    }
+    .about-image {
+        width: 100%;
+    }
+
+    .footer {
+        height: 420px;
+    }
 }

@@ -1,7 +1,10 @@
-// import Swiper from "swiper";
+// const Swiper = require("swiper")
+
+// import Swiper from 'swiper'
+// Swiper.use(Navigation, EffectFade)
+
 const slider = new Swiper('.swiper-container', {
     speed: 400,
-    // loop: true,
     navigation: {
         slideClass: '.projects-slide',
         nextEl: '.swiper-button-next',
@@ -9,16 +12,25 @@ const slider = new Swiper('.swiper-container', {
     },
 })
 
-// yandex-map pointer-events switching
+const cardSlider = new Swiper('.swiper-container.cards-slider', {
+    speed: 400,
+    navigation: {
+        slideClass: '.swiper-slide',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
 
+// yandex-map pointer-events switching
+const map = document.querySelector('.map-section iframe')
 document.addEventListener('click', (e) => {
-    const map = document.querySelector('.map-section iframe')
     if (e.target.className === 'map-section') {
         map.style.pointerEvents = 'all'
     } else {
         map.style.pointerEvents = 'none'
     }
 })
+
 
 // fixed header 
 
@@ -46,3 +58,35 @@ window.onscroll = () => {
     }
 
 }
+
+// nav-menu slider
+
+const navlinks = document.querySelectorAll('.nav-link-block')
+const navSlider = document.querySelector('.nav-link-underline')
+const setActiveClass = (e) => {
+    navlinks.forEach((link) => {
+        link.classList.remove('active')
+    })
+
+    e.currentTarget.classList.add('active')
+
+}
+
+function showSlider(e) {
+    navSlider.style.display === 'none' ? navSlider.style.display = 'block' : null
+    navlinks.forEach(link => link.removeEventListener('click', showSlider))
+
+}
+navlinks.forEach((link) => {
+    link.addEventListener('click', setActiveClass)
+    link.addEventListener('click', showSlider)
+
+})
+
+// mobile nav-menu
+
+const navIcon = document.querySelector('.nav-menu-icon')
+const navMenu = document.querySelector('.header-nav .mobile-nav')
+navIcon.addEventListener('click', () => {
+    navMenu.style.display === 'none' ? navMenu.style.display = 'block' : navMenu.style.display = 'none'
+})
